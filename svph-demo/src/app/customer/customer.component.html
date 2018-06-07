@@ -1,0 +1,79 @@
+<div class="row container">
+	<div class="col-lg-8">
+		 <div  *ngIf="sven" ><br>
+		 	<div class="row">
+  	<legend class="col-lg-9">Detaljinformation              </legend>
+  	<input type="submit" class= "btn btn-primary col-lg-3" value="Maila"></div><br>
+  <table class="table " >
+  <tbody>
+    <tr>
+      <th scope="row">Email</th>
+      <td>sven@test.se</td>
+    </tr>
+    <tr>
+      <th scope="row">Förnamn</th>
+      <td>Sven</td>
+    </tr>
+    <tr>
+      <th scope="row">Eftenamn</th>
+      <td>Svensson</td>
+    </tr>
+    <tr>
+      <th scope="row">Personnummer</th>
+      <td>19551219-1111</td>
+    </tr>   
+        <tr style="border-top:solid;border-top-width: 1.5px;">
+      <th scope="row">Land</th>
+      <td>Sverige</td>
+    </tr>
+        <tr>
+      <th scope="row">Postadress</th>
+      <td>Drottninggatan 1</td>
+    </tr> 
+        <tr>
+      <th scope="row">Postnummer</th>
+      <td>17683</td>
+    </tr> 
+        <tr >
+      <th scope="row">Ort</th>
+      <td>Stockholm</td>
+    </tr> 
+        <tr style="border-top:solid;border-top-width: 1.5px;">
+      <th scope="row">Telefon hem</th>
+      <td>08-111111</td>
+    </tr> 
+         <tr>
+      <th scope="row">Telefon mobil</th>
+      <td>073-57344529</td>
+    </tr> 
+   </tbody>
+</table> </div>
+	<br>
+	<legend>Registrerade Kunder</legend>
+	<br>
+	<table class="table table-hover" >
+  <tbody>
+  	  <tr>
+      <th scope="col">Namn</th>
+      <th scope="col">Köplats</th>
+      <th scope="col">Email</th>
+      <th scope="col">Ta bort</th>
+    </tr>
+    <tr (click)="sven = !sven">
+      <td>Sven Svensson</td>
+      <td>3</td>
+      <td>sven@exempel.se</td>
+      <td><a href="#" >X</a></td>
+    </tr>
+    <tr>
+      <td>Knut Knutsson</td>
+      <td>Hyresgäst</td>
+      <td>knut@exempel.se</td>
+      <td><a href="#" >X</a></td>
+    </tr>
+
+   </tbody>
+  </table><br>
+
+</div>
+</div>

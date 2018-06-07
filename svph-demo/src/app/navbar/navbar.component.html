@@ -1,0 +1,26 @@
+<ul class="nav nav-tabs">
+  <li *ngIf= "!this.authService.employee && !this.authService.admin" class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact: true}">
+    <a class="nav-link " [routerLinkActive]="['active']" [routerLink]="['/start']">Översikt</a>
+  </li>
+  <li class="nav-item " [routerLinkActive]="['active']" >
+    <a class="nav-link" [routerLinkActive]="['active']" [routerLink]="['/search']">Lediga lägenheter</a>
+  </li>
+  <li *ngIf= "!this.authService.employee && !this.authService.admin" class="nav-item"[routerLinkActive]="['active']" >
+    <a class="nav-link" [routerLinkActive]="['active']" [routerLink]="['/help']">Hjälp</a>
+  </li>
+  <li *ngIf= "this.authService.loggedin" class="nav-item" [routerLinkActive]="['active']" >
+    <a class="nav-link"  [routerLinkActive]="['active']" [routerLink]="['/profile']">Min profil</a>
+  </li>
+    <li *ngIf="this.authService.employee || this.authService.admin" class="nav-item" [routerLinkActive]="['active']" >
+    <a class= "nav-link" [routerLinkActive]="['active']" [routerLink]="['/customer']">Registrerade kunder</a >
+</li>
+    <li *ngIf="this.authService.employee || this.authService.admin" class="nav-item" [routerLinkActive]="['active']" >
+    <a class= "nav-link" [routerLinkActive]="['active']" [routerLink]="['/invoices']">Skickade fakturor</a >
+</li>
+    <li *ngIf="this.authService.admin" class="nav-item">
+    <a class= "nav-link" [routerLinkActive]="['active']" [routerLink]="['/employees']">Anställda</a >
+</li>
+  <li *ngIf="this.authService.loggedin || this.authService.employee || this.authService.admin" class="nav-item">
+    <a class= "nav-link" (click)= "logOut()" href= "/start"> Logga ut</a >
+</li>
+</ul>

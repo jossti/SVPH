@@ -1,0 +1,103 @@
+<div class= "row" style= "padding-top: 1em">
+<div class= "col-lg-3" style= "text-align:left">
+	<form style= "border-bottom:solid; border-bottom-width: 1px; border-bottom-color: #ccc; padding-bottom: 1em">
+		<fieldset>
+	<legend>Sökalternativ</legend>
+	    <div class="form-group">
+      <label for="exampleSelect1">Lägenhet för</label>
+      <select class="form-control" id="exampleSelect1">
+      	<option>Alla</option>
+        <option>1 person</option>
+        <option>2 personer</option>
+
+      </select>
+    </div>
+
+        <div class="form-group">
+      <label for="exampleSelect1">Antal rum</label>
+      <select class="form-control" id="exampleSelect1">
+      	<option>Alla</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+      </select>
+    </div>
+
+        <div class="form-group">
+      <label for="exampleSelect1">Område</label>
+      <select class="form-control" id="exampleSelect1">
+        <option>Alla</option>
+        <option>Fredhäll</option>
+        <option>Nockebyhem</option>
+        <option>Nockebyhus</option>
+
+      </select>
+    </div>
+<button class="btn btn-primary" type="submit" > Sök </button>
+</fieldset>
+</form>
+<br>
+<div *ngIf= "this.authService.loggedin">
+<legend>Visa mina</legend>
+<ul class="nav">
+  <li class="nav-item" >
+    <a class="nav-link" >Sökprenumerationer</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" >Intresseanmälningar</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" >Erbjudanden</a>
+</li>
+</ul>
+</div>
+</div>
+<div class= "col-lg-9">
+
+<legend>Sökresultat</legend><br>
+
+<div class="row" style="border-right: solid; border-bottom: solid; border-width: 1px; border-color: #ccc; margin: 0.5em">
+<img class="col-lg-4" src="https://bilder.hemnet.se/images/results_list/d9/d2/d9d289ae66463fac82347e47a39a2856.jpg">
+<div class="col-lg-8" style= "text-align: left">
+		<h6>Nockebygatan 5a</h6>
+
+	<div class="row">
+
+	<p class= "col-lg-6">55 kvm   <br> 2 rum</p>
+	<p class= "col-lg-6">2000 kr/mån   <br>1 person</p><br> 
+  <input *ngIf= "this.authService.loggedin" class = "btn btn-outline-primary" value = "Anmäl intresse">
+</div>
+</div>
+</div>
+
+<div class="row" style="border-right: solid; border-bottom: solid; border-width: 1px; border-color: #ccc; margin: 0.5em">
+<img class="col-lg-4" src="https://bilder.hemnet.se/images/results_list/e9/7d/e97d1c1048986104d577644b1b0bac74.jpg">
+<div class="col-lg-8" style= "text-align: left">
+		<h6>Fredhällplan 20</h6>
+
+	<div class="row">
+
+	<p class= "col-lg-6">30 kvm   <br> 1 rum</p>
+	<p class= "col-lg-6">2000 kr/mån   <br>1 person</p><br> 
+  <input *ngIf= "this.authService.loggedin" class = "btn btn-outline-primary" value = "Anmäl intresse">
+</div>
+</div>
+</div>
+
+<div class="row" style="border-right: solid; border-bottom: solid; border-width: 1px; border-color: #ccc; margin: 0.5em">
+<img class="col-lg-4" src="https://bilder.hemnet.se/images/results_list/40/d6/40d61179e9e6188e69a9c86b5236be25.jpg">
+<div class="col-lg-8" style= "text-align: left">
+		<h6>Nockebyhus 10</h6>
+
+	<div class="row">
+
+	<p class= "col-lg-6">100 kvm   <br> 2 rum</p>
+	<p class= "col-lg-6">2000 kr/mån   <br>2 person</p><br> 
+  <input *ngIf= "this.authService.loggedin" class = "btn btn-outline-primary" value = "Anmäl intresse">
+</div>
+</div>
+</div>
+
+
+</div>
+</div>

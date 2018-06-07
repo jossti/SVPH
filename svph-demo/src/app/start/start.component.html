@@ -1,0 +1,94 @@
+<div *ngIf= "!this.authService.loggedin" class= "row">
+	<div class="col-lg-8">
+  <div class="jumbotron" style="text-align:left">
+
+  <p>
+Här kan du som fyllt 55 år ställa dig i bostadskön och anmäla intresse för lediga lägenheter. 
+<br>
+Om du inte redan står i bostadskön måste du registrera dig och sedan kan du logga in med ditt användarnamn och lösenord. Som inloggad kan du söka och bevaka de lägenheter som du är intresserad av.
+<br>
+</div>
+  </div>
+<div class="col-lg-4">
+<form style="text-align:left; margin-top: 3em">
+	<div class= "form-group">
+		<label>Email</label>
+		<input type= "text" class= "form-control" name="email">
+	</div>
+	<div class= "form-group">
+		<label>Password</label>
+		<input type= "password" class= "form-control" name="password">
+	</div>
+	<input type= "submit" class= "btn btn-primary" (click)= "onLogin()" value= "Logga in">
+	<input type= "submit" class= "btn btn-outline-primary" (click)= "onRegister()" value= "Registrera dig" style="margin-left:1em">
+
+</form>
+</div>
+</div>
+
+<div *ngIf= "this.authService.loggedin" class= "row" >
+	<div class="col-lg-9"> <br>
+    <legend>Kundstatus</legend><br>
+
+		<table class="table">
+
+  <tbody>
+    <tr>
+      <th scope="row">Intresseanmälan bostad</th>
+      <td>5 st</td>
+    </tr>
+    <tr>
+      <th scope="row">Erbjudande bostad</th>
+      <td>2 st</td>
+    </tr>
+    <tr>
+      <th scope="row">Kund sedan</th>
+      <td>2011-04-14</td>
+    </tr>
+    <tr>
+      <th scope="row">Sökprenumeration</th>
+      <td>Ej startad</td>
+    </tr>    
+   </tbody>
+</table> 
+</div>
+	<div class="col-lg-3"><br>
+		<form>
+		<fieldset>
+	<legend>Snabbsök</legend>
+	    <div class="form-group">
+      <label for="exampleSelect1">Lägenhet för</label>
+      <select class="form-control" id="exampleSelect1">
+      	<option>Alla</option>
+        <option>1 person</option>
+        <option>2 personer</option>
+
+      </select>
+    </div>
+
+        <div class="form-group">
+      <label for="exampleSelect1">Antal rum</label>
+      <select class="form-control" id="exampleSelect1">
+      	<option>Alla</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+      </select>
+    </div>
+
+        <div class="form-group">
+      <label for="exampleSelect1">Område</label>
+      <select class="form-control" id="exampleSelect1">
+        <option>Alla</option>
+        <option>Fredhäll</option>
+        <option>Nockebyhem</option>
+        <option>Nockebyhus</option>
+
+      </select>
+    </div>
+<button class="btn btn-primary" type="submit" > Sök </button>
+</fieldset>
+</form>
+</div>
+
+</div>
