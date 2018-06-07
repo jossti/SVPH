@@ -1,5 +1,5 @@
 <div class="row container">
-  <div class= "col-lg-4">
+  <div class= "col-lg-2">
   <br>
   <legend>År</legend>
 <ul class="nav nav-pills flex-column" style= " border-right: solid; border-width: 1px; border-color: #ccc">
@@ -11,7 +11,7 @@
   </li>
 </ul>
 </div>
-<div class="col-lg-8">
+<div class="col-lg-10">
 <br>
 		<legend>Skickade fakturor</legend><br>
     <div class="row">
@@ -31,6 +31,10 @@
         <option>Registrera som obetalda</option>
       </select>
     </div>
+    <div class="form-group col-lg-4">
+      <label for="search">Sök:</label>
+      <input type="text" class="form-control" id="search" placeholder="t.ex. ocr, namn">
+    </div>
   </div>
 		<table class="table " >
   <tbody>
@@ -38,6 +42,7 @@
       <th scope="col">Namn</th>
       <th scope="col">Datum</th>
       <th scope="col">Status</th>
+      <th scope="col">Ocr</th>
       <th scope="col">Faktura</th>
 
     </tr>
@@ -45,6 +50,7 @@
       <td>Sven Svensson</td>
       <td>2018-01-30</td>
       <td>Betald</td>
+      <td>40005678</td>
       <td>pdf</td>
       <td>    
 <div class="custom-control custom-checkbox" >
@@ -60,6 +66,7 @@
       <td>Knut Knutsson</td>
       <td>2018-01-30</td>
       <td>Obetald</td>
+      <td>40005680</td>
       <td><a href="/../../assets/Invoice-703C55F-0001.pdf">Pdf</a></td>
             <td>       <div class="custom-control custom-checkbox" >
       <input type="checkbox" class="custom-control-input" id="sven" >

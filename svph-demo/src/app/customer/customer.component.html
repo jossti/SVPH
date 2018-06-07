@@ -2,7 +2,7 @@
 	<div class="col-lg-8">
 		 <div  *ngIf="sven" ><br>
 		 	<div class="row">
-  	<legend class="col-lg-9">Detaljinformation              </legend>
+  	<legend class="col-lg-9" (click)="sven = !sven">Detaljinformation (dölj)</legend>
   	<input type="submit" class= "btn btn-primary col-lg-3" value="Maila"></div><br>
   <table class="table " >
   <tbody>
@@ -55,13 +55,13 @@
   <tbody>
   	  <tr>
       <th scope="col">Namn</th>
-      <th scope="col">Köplats</th>
+      <th scope="col">Antal ködagar</th>
       <th scope="col">Email</th>
       <th scope="col">Ta bort</th>
     </tr>
     <tr (click)="sven = !sven">
       <td>Sven Svensson</td>
-      <td>3</td>
+      <td>1567</td>
       <td>sven@exempel.se</td>
       <td><a href="#" >X</a></td>
     </tr>
