@@ -1,3 +1,30 @@
+<div *ngIf= "this.authService.admin || this.authService.employee" class= "row">
+      <legend>Exempelinformation</legend><br>
+    <table class="table">
+
+    <tbody>
+        <tr>
+      <th scope="row">Fakturor med överskridet förfallod.</th>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th scope="row">Accepterade erbjudanden</th>
+      <td>3 st</td>
+    </tr>
+    <tr>
+      <th scope="row">Nya lägenheter denna vecka</th>
+      <td>2 st</td>
+    </tr>
+    <tr>
+      <th scope="row">Nästa visning</th>
+      <td>2018-10-14</td>
+    </tr>
+
+   </tbody>
+</table> 
+</div>
+
+
 <div *ngIf= "!this.authService.loggedin" class= "row">
 	<div class="col-lg-8">
   <div class="jumbotron" style="text-align:left">
@@ -52,7 +79,11 @@ Om du inte redan står i bostadskön måste du registrera dig och sedan kan du l
     <tr>
       <th scope="row">Sökprenumeration</th>
       <td>Ej startad</td>
-    </tr>    
+    </tr>   
+        <tr>
+      <th scope="row">Karantänstatus</th>
+      <td>3 missade visningar kvar till karantän</td>
+    </tr> 
    </tbody>
 </table> 
 </div>
